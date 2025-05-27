@@ -45,7 +45,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+    <section className="relative h-full min-h-[calc(100vh-4.5rem)] flex items-center justify-center overflow-hidden bg-gray-900">
       {/* Slides */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
