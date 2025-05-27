@@ -12,7 +12,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('common.appName'),
     description: t('landing.description'),
-    viewport: 'width=device-width, initial-scale=1.0',
   }
 }
 
@@ -22,7 +21,7 @@ export function generateStaticParams() {
 
 interface LocaleLayoutProps {
   children: ReactNode
-  params: { locale: string }
+  // params: { locale: string }
 }
 
 function Loading() {
@@ -32,16 +31,16 @@ function Loading() {
     </div>
   )
 }
+
 export default function LocaleLayout({
   children,
-  params,
 }: LocaleLayoutProps) {
-  const locale = params?.locale || 'en' // Default to 'en'
+  const locale = 'en' // Default to 'en'
   const dir = getLocaleDirection(locale)
 
   return (
     <Suspense fallback={<Loading />}>
-      <html dir={dir} lang={locale} >
+      <html dir={dir} lang={locale}>
         <body>
           <Providers locale={locale}>
             <Navbar />
