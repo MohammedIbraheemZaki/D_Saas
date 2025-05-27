@@ -21,6 +21,7 @@ export function generateStaticParams() {
 
 interface LocaleLayoutProps {
   children: ReactNode
+  params: { locale: string }
 }
 
 function Loading() {
@@ -31,8 +32,7 @@ function Loading() {
   )
 }
 
-export default function RootLayout({ children }: LocaleLayoutProps) {
-  const locale = 'en' // Default to 'en'
+export default function RootLayout({ children, params: { locale } }: LocaleLayoutProps) {
   const dir = getLocaleDirection(locale)
 
   return (
