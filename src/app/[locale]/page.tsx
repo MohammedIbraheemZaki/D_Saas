@@ -2,9 +2,6 @@ import { Suspense } from 'react'
 import LandingClient from './LandingClient'
 import { locales } from '@/i18n/config'
 
-// Prevent prerendering of this page
-export const dynamic = 'force-dynamic'
-
 // Generate static params for all supported locales
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
@@ -19,18 +16,19 @@ function Loading() {
   )
 }
 
-// Add type for page props
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
 
+// type PageProps = {
+//   params: { locale: string }
+// }
 
-export default function LandingPage() {
-  // Validate locale
-  // if (!locales.includes(params?.locale)) {
-  //   return null // This will trigger a 404 page
-  // }
-
+export default function Page() {
   return (
-    <Suspense fallback={<Loading />}>
-      <LandingClient />
-    </Suspense>
+    <div className="min-h-screen">
+      <Suspense fallback={<Loading />}>
+        <LandingClient />
+      </Suspense>
+    </div>
   )
 } 
