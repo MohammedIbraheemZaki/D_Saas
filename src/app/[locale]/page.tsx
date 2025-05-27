@@ -13,7 +13,7 @@ function Loading() {
   )
 }
 
-export default function LandingPage() {
+export default async function LandingPage() {
   return (
     <Suspense fallback={<Loading />}>
       <LandingClient />

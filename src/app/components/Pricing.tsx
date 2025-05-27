@@ -3,7 +3,7 @@
 // import { useI18n, useCurrentLocale } from '@/i18n/client';
 import Button from '@/app/components/ui/Button';
 // import { Check } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/app/lib/utils';;
 
 interface Plan {
   name: string;

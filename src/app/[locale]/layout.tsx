@@ -31,7 +31,7 @@ function Loading() {
   )
 }
 
-export default function LocaleLayout({ children }: LocaleLayoutProps) {
+export default function RootLayout({ children }: LocaleLayoutProps) {
   const locale = 'en' // Default to 'en'
   const dir = getLocaleDirection(locale)
 
