@@ -1,10 +1,9 @@
 'use client'
 
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Pricing from '../components/Pricing'
-import Contact from '../components/Contact'
-// import { useI18n } from '@/i18n/client'
+import About from "@/app/components/About"
+import Contact from "@/app/components/Contact"
+import Hero from "@/app/components/Hero"
+import Pricing from "@/app/components/Pricing"
 
 export default function LandingClient() {
   // Initialize i18n hook
