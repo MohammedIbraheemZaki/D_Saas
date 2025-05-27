@@ -26,11 +26,11 @@ interface PageProps {
   }
 }
 
-export default async function LandingPage({ params }: PageProps) {
+export default function LandingPage({ params }: PageProps) {
   // Validate locale
-  if (!locales.includes(params.locale)) {
-    return null // This will trigger a 404 page
-  }
+  // if (!locales.includes(params?.locale)) {
+  //   return null // This will trigger a 404 page
+  // }
 
   return (
     <Suspense fallback={<Loading />}>
