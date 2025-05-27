@@ -20,13 +20,9 @@ function Loading() {
 }
 
 // Add type for page props
-interface PageProps {
-  params: {
-    locale: string
-  }
-}
 
-export default function LandingPage({ params }: PageProps) {
+
+export default function LandingPage() {
   // Validate locale
   // if (!locales.includes(params?.locale)) {
   //   return null // This will trigger a 404 page
