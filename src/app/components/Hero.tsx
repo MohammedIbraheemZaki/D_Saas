@@ -58,7 +58,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
             <Image src={slide.image} alt={slide.title} fill />
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl">
+              <div className="text-center text-black px-4 sm:px-6 lg:px-8 max-w-4xl">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
                   {slide.title}
                 </h1>
