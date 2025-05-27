@@ -21,7 +21,6 @@ export function generateStaticParams() {
 
 interface LocaleLayoutProps {
   children: ReactNode
-  // params: { locale: string }
 }
 
 function Loading() {
@@ -32,16 +31,14 @@ function Loading() {
   )
 }
 
-export default function LocaleLayout({
-  children,
-}: LocaleLayoutProps) {
+export default function LocaleLayout({ children }: LocaleLayoutProps) {
   const locale = 'en' // Default to 'en'
   const dir = getLocaleDirection(locale)
 
   return (
     <Suspense fallback={<Loading />}>
-      <html dir={dir} lang={locale}>
-        <body>
+      <html dir={dir} lang={locale} suppressHydrationWarning>
+        <body suppressHydrationWarning>
           <Providers locale={locale}>
             <Navbar />
             <main className="min-h-[calc(100vh-201px)]">
